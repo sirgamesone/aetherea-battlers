@@ -1,0 +1,7 @@
+<button *ngIf="!authService.userIsLoggedIn()" (click)="executeLogin()">LOGIN</button>
+<button *ngIf="authService.userIsLoggedIn()" (click)="executeLogout()">LOGOUT</button>
+
+
+<aet-logged-user-info></aet-logged-user-info>
+<aet-tokens-dashboard></aet-tokens-dashboard>
+<aet-nfts-dashboard></aet-nfts-dashboard>

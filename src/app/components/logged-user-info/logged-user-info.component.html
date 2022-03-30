@@ -1,0 +1,10 @@
+<div>
+  <h5>User info</h5>
+  <div *ngIf="(authService.currentUser()) as currentUser">
+      <pre>
+      {{(authService.currentUser()) | json}}
+      </pre>
+
+  </div>
+
+</div>
