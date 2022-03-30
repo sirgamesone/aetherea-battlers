@@ -9,6 +9,7 @@ import { TokensDashboardComponent } from './components/tokens-dashboard/tokens-d
 import { NftsDashboardComponent } from './components/nfts-dashboard/nfts-dashboard.component';
 import { OpenseaAssetComponent } from './components/opensea-asset/opensea-asset.component';
 import {HttpClientModule} from '@angular/common/http';
+import { BattlerCardComponent } from './components/battler-card/battler-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
     LoggedUserInfoComponent,
     TokensDashboardComponent,
     NftsDashboardComponent,
-    OpenseaAssetComponent
+    OpenseaAssetComponent,
+    BattlerCardComponent
   ],
   imports: [
     BrowserModule,
