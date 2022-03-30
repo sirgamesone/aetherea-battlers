@@ -7,6 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { LoggedUserInfoComponent } from './components/logged-user-info/logged-user-info.component';
 import { TokensDashboardComponent } from './components/tokens-dashboard/tokens-dashboard.component';
 import { NftsDashboardComponent } from './components/nfts-dashboard/nfts-dashboard.component';
+import { OpenseaAssetComponent } from './components/opensea-asset/opensea-asset.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { NftsDashboardComponent } from './components/nfts-dashboard/nfts-dashboa
     LoginComponent,
     LoggedUserInfoComponent,
     TokensDashboardComponent,
-    NftsDashboardComponent
+    NftsDashboardComponent,
+    OpenseaAssetComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

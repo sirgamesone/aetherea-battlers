@@ -8,6 +8,12 @@ export const environment = {
     serverUrl: 'https://laaw5n5js8xl.usemoralis.com:2053/server',
     appId: 'lxBCFSjR55vRgz83pqFOjXZEHyu4FuuiOPZjIERu',
   },
+  opensea: {
+    baseHost: 'https://api.opensea.io/api/v1',
+    collections: '/collections',
+    singleCollection: '/collection/{collection_slug}',
+    assets: '/assets'
+  }
 };
 
 /*
