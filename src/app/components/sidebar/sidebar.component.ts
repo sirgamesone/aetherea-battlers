@@ -1,0 +1,18 @@
+import {Component, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'aet-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss']
+})
+export class SidebarComponent implements OnInit {
+
+  open: boolean = false;
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+}

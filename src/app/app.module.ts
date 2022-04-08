@@ -10,16 +10,30 @@ import { NftsDashboardComponent } from './components/nfts-dashboard/nfts-dashboa
 import { OpenseaAssetComponent } from './components/opensea-asset/opensea-asset.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BattlerCardComponent } from './components/battler-card/battler-card.component';
+import { PageLayoutComponent } from './components/page-layout/page-layout.component';
+import { HomeComponent } from './components/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
+import {EthAddressMinifyPipe} from './pipe/eth-address-minify.pipe';
+import { BattlersListComponent } from './components/battlers-list/battlers-list.component';
+import { BattlerDetailComponent } from './components/battler-detail/battler-detail.component';
 
 @NgModule({
   declarations: [
+    EthAddressMinifyPipe,
     AppComponent,
     LoginComponent,
     LoggedUserInfoComponent,
     TokensDashboardComponent,
     NftsDashboardComponent,
     OpenseaAssetComponent,
-    BattlerCardComponent
+    BattlerCardComponent,
+    PageLayoutComponent,
+    HomeComponent,
+    SidebarComponent,
+    HeaderComponent,
+    BattlersListComponent,
+    BattlerDetailComponent
   ],
   imports: [
     BrowserModule,

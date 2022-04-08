@@ -32,11 +32,14 @@ export class OpenseaService {
    * @param collectionSlug Limit responses to members of a collection
    * @param cursor A cursor to be supplied as a query param to retrieve the next page
    */
-  retrieveAssets(collectionSlug: string, cursor?: string): Observable<{ assets: OpenseaAssetDto[], next?: string, previous?: string }> {
+  retrieveAssets(collectionSlug: string, tokenIds: string[] = [], cursor?: string): Observable<{ assets: OpenseaAssetDto[], next?: string, previous?: string }> {
     const url = environment.opensea.baseHost + environment.opensea.assets;
-    const params = new HttpParams()
+    let params = new HttpParams()
       .set('collection_slug', collectionSlug)
       .set('limit', '50');
+    if (tokenIds.length > 0) {
+      params = params.append('token_ids', tokenIds.join(','));
+    }
     return this.http.get<{ assets: OpenseaAssetDto[], next?: string, previous?: string }>(url, {params});
   }
 }

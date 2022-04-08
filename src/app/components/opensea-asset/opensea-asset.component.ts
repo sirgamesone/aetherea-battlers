@@ -18,7 +18,7 @@ export class OpenseaAssetComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.openseaService.retrieveAssets(environment.collectionSlug).subscribe(response => {
+    this.openseaService.retrieveAssets(environment.aethereaBattlersCollectionSlug).subscribe(response => {
       this.aethereaAssets = response.assets;
       this.nextPage = response.next;
       this.previousPage = response.previous;

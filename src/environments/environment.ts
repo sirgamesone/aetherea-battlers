@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  collectionSlug: 'aetherea-battlers',
+  aethereaBattlersCollectionSlug: 'aetherea-battlers',
   moralis: {
     serverUrl: 'https://laaw5n5js8xl.usemoralis.com:2053/server',
     appId: 'lxBCFSjR55vRgz83pqFOjXZEHyu4FuuiOPZjIERu',

@@ -1,4 +1,17 @@
-<div class="rounded-lg shadow-lg border border-gray-500 p-2">
-  <h5 class="p-5">{{battler.name}}</h5>
-  <img [src]="battler.image_url">
+<div class="rounded-lg shadow-lg border border-gray-500  hover:bg-black cursor-pointer h-full grid" (click)="navigateToBattlerDetail()">
+  <div *ngIf="battler" class="flex flex-row justify-between pl-2 pr-2">
+    <small class="">{{battler.name}}</small>
+    <small class="bg-violet rounded-lg p-1">{{battlerUtils.battlerClass(battler)}}</small>
+  </div>
+  <img *ngIf="battler" [src]="battler.image_url">
+  <div *ngIf="battler" class="flex flex-row justify-between pl-2 pr-2">
+    <small class="">{{battlerUtils.getTier(battler)}}</small>
+    <small class="">{{battlerUtils.legion(battler)}}</small>
+  </div>
+
+  <div *ngIf="!battler" class="flex items-center justify-center space-x-2 animate-bounce h-256">
+    <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
+    <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
+    <div class="w-4 h-4 bg-blue-400 rounded-full"></div>
+  </div>
 </div>
