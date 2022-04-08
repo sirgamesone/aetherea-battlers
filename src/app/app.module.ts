@@ -17,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {EthAddressMinifyPipe} from './pipe/eth-address-minify.pipe';
 import { BattlersListComponent } from './components/battlers-list/battlers-list.component';
 import { BattlerDetailComponent } from './components/battler-detail/battler-detail.component';
+import { LoreComponent } from './components/lore/lore.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BattlerDetailComponent } from './components/battler-detail/battler-deta
     SidebarComponent,
     HeaderComponent,
     BattlersListComponent,
-    BattlerDetailComponent
+    BattlerDetailComponent,
+    LoreComponent
   ],
   imports: [
     BrowserModule,

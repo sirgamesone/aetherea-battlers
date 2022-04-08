@@ -57,10 +57,17 @@ export class BattlerUtils {
   }
 
   /**
-   * @returns the sum of power + speed + technique + intelligence + cooperativeness
+   * @returns the sum of power + speed + technique + intelligence + cooperativeness (max 50)
    */
   attributesSum(battler: OpenseaAssetDto): number {
     return this.cooperativeness(battler) + this.speed(battler) + this.power(battler) + this.technique(battler) + this.intelligence(battler);
+  }
+
+  /**
+   * @returns 0-100 rating
+   */
+  getOverall(battler: OpenseaAssetDto): number {
+    return (this.attributesSum(battler) - this.cooperativeness(battler)) / 40 * 100;
   }
 
   getTier(battler: OpenseaAssetDto): string {
@@ -76,7 +83,6 @@ export class BattlerUtils {
         return 'C';
       default:
         return 'D';
-
     }
   }
 }

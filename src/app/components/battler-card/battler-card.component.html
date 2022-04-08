@@ -6,6 +6,7 @@
   <img *ngIf="battler" [src]="battler.image_url">
   <div *ngIf="battler" class="flex flex-row justify-between pl-2 pr-2">
     <small class="">{{battlerUtils.getTier(battler)}}</small>
+    <small class="bg-gold pl-2 pr-2 text-black rounded-md font-bold">{{battlerUtils.getOverall(battler) | number}}</small>
     <small class="">{{battlerUtils.legion(battler)}}</small>
   </div>
 
