@@ -1,3 +1,7 @@
 <aet-page-layout>
-<aet-battler-card [battler]="battlerAsset"></aet-battler-card>
+  <div class="flex flex-row">
+
+  <aet-battler-card [battler]="battlerAsset"></aet-battler-card>
+  <aet-stats-chart *ngIf="battlerAsset" [battler]="battlerAsset"></aet-stats-chart>
+  </div>
 </aet-page-layout>

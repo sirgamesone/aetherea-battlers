@@ -1,23 +1,26 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { LoggedUserInfoComponent } from './components/logged-user-info/logged-user-info.component';
-import { TokensDashboardComponent } from './components/tokens-dashboard/tokens-dashboard.component';
-import { NftsDashboardComponent } from './components/nfts-dashboard/nfts-dashboard.component';
-import { OpenseaAssetComponent } from './components/opensea-asset/opensea-asset.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {LoginComponent} from './components/login/login.component';
+import {LoggedUserInfoComponent} from './components/logged-user-info/logged-user-info.component';
+import {TokensDashboardComponent} from './components/tokens-dashboard/tokens-dashboard.component';
+import {NftsDashboardComponent} from './components/nfts-dashboard/nfts-dashboard.component';
+import {OpenseaAssetComponent} from './components/opensea-asset/opensea-asset.component';
 import {HttpClientModule} from '@angular/common/http';
-import { BattlerCardComponent } from './components/battler-card/battler-card.component';
-import { PageLayoutComponent } from './components/page-layout/page-layout.component';
-import { HomeComponent } from './components/home/home.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { HeaderComponent } from './components/header/header.component';
+import {BattlerCardComponent} from './components/battler-card/battler-card.component';
+import {PageLayoutComponent} from './components/page-layout/page-layout.component';
+import {HomeComponent} from './components/home/home.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {HeaderComponent} from './components/header/header.component';
 import {EthAddressMinifyPipe} from './pipe/eth-address-minify.pipe';
-import { BattlersListComponent } from './components/battlers-list/battlers-list.component';
-import { BattlerDetailComponent } from './components/battler-detail/battler-detail.component';
-import { LoreComponent } from './components/lore/lore.component';
+import {BattlersListComponent} from './components/battlers-list/battlers-list.component';
+import {BattlerDetailComponent} from './components/battler-detail/battler-detail.component';
+import {LoreComponent} from './components/lore/lore.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {StatsChartComponent} from './components/stats-chart/stats-chart.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,14 +38,18 @@ import { LoreComponent } from './components/lore/lore.component';
     HeaderComponent,
     BattlersListComponent,
     BattlerDetailComponent,
-    LoreComponent
+    LoreComponent,
+    StatsChartComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
